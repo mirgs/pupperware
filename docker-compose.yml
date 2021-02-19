@@ -62,6 +62,16 @@ services:
     volumes:
       - puppetdb:/opt/puppetlabs/server/data/puppetdb
 
+
+  debian: 
+    image: debian:latest
+  alpine:
+    image: puppet/puppet-agent-alpine
+    entrypoint: /bin/ash
+  ubuntu:
+    image: puppet/puppet-agent-ubuntu
+    entrypoint: /bin/bash
+
 volumes:
   puppetserver-code:
   puppetserver-config:
